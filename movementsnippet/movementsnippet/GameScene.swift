@@ -32,27 +32,39 @@ class GameScene: SKScene {
         }
     }
     
-    func moveHoryzontalny(side:Bool){
-        player?.removeAllActions()
-        movingMode = true
-        
-        if let player = self.player{
-            let verdicalSide:CGPoint?
-            if side{ //right
-                verdicalSide = CGPoint(x:player.position.x + 40 , y:player.position.y)
-            }else{ // left
-                verdicalSide = CGPoint(x:player.position.x - 40 , y:player.position.y)
-            }
-            let moveAction = SKAction.move(to: verdicalSide!, duration: 0.4)
-            
-            player.run(moveAction, completion: {
-                self.movingMode = false
-            })
-            
-            self.run(moveSound)
+    func moveHoryzontalny(left: Bool){
+        if left{
+            let moveAction = SKAction.moveBy(x: 3, y:  0, duration: 0.01)
+            let repeatAction = SKAction.repeatForever(moveAction)
+            player?.run(repeatAction)
+        }else{
+            let moveAction = SKAction.moveBy(x: -3, y:  0, duration: 0.01)
+            let repeatAction = SKAction.repeatForever(moveAction)
+            player?.run(repeatAction)
         }
     }
     
+//    func moveHoryzontalny(side:Bool){
+//        player?.removeAllActions()
+//        movingMode = true
+//
+//        if let player = self.player{
+//            let verdicalSide:CGPoint?
+//            if side{ //right
+//                verdicalSide = CGPoint(x:player.position.x + 40 , y:player.position.y)
+//            }else{ // left
+//                verdicalSide = CGPoint(x:player.position.x - 40 , y:player.position.y)
+//            }
+//            let moveAction = SKAction.move(to: verdicalSide!, duration: 0.4)
+//
+//            player.run(moveAction, completion: {
+//                self.movingMode = false
+//            })
+//
+//            self.run(moveSound)
+//        }
+//    }
+//
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
@@ -60,9 +72,9 @@ class GameScene: SKScene {
             let location = tauch.previousLocation(in: self)
             let node = self.nodes(at: location).first
             if node?.name == "right"{
-                moveHoryzontalny(side: true)
+                moveHoryzontalny(left: true)
             }else if node?.name == "left"{
-                moveHoryzontalny(side: false)
+                moveHoryzontalny(left: false)
             }else if node?.name == "up"{
                 print("move Up")
                 moveVertically(up: true)
