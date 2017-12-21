@@ -15,6 +15,7 @@
 		D31FF3431FEC3418000626FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D31FF3411FEC3418000626FB /* Main.storyboard */; };
 		D31FF3451FEC3418000626FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D31FF3441FEC3418000626FB /* Assets.xcassets */; };
 		D31FF3481FEC3418000626FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D31FF3461FEC3418000626FB /* LaunchScreen.storyboard */; };
+		D31FF3511FEC4916000626FB /* move.wav in Resources */ = {isa = PBXBuildFile; fileRef = D31FF3501FEC4915000626FB /* move.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		D31FF3441FEC3418000626FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D31FF3471FEC3418000626FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D31FF3491FEC3419000626FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D31FF3501FEC4915000626FB /* move.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = move.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +62,11 @@
 		D31FF3361FEC3418000626FB /* movementsnippet */ = {
 			isa = PBXGroup;
 			children = (
+				D31FF34F1FEC4902000626FB /* Sounds */,
 				D31FF3371FEC3418000626FB /* AppDelegate.swift */,
-				D31FF3391FEC3418000626FB /* GameScene.sks */,
 				D31FF33B1FEC3418000626FB /* Actions.sks */,
 				D31FF33D1FEC3418000626FB /* GameScene.swift */,
+				D31FF3391FEC3418000626FB /* GameScene.sks */,
 				D31FF33F1FEC3418000626FB /* GameViewController.swift */,
 				D31FF3411FEC3418000626FB /* Main.storyboard */,
 				D31FF3441FEC3418000626FB /* Assets.xcassets */,
@@ -71,6 +74,14 @@
 				D31FF3491FEC3419000626FB /* Info.plist */,
 			);
 			path = movementsnippet;
+			sourceTree = "<group>";
+		};
+		D31FF34F1FEC4902000626FB /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				D31FF3501FEC4915000626FB /* move.wav */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +146,7 @@
 				D31FF3431FEC3418000626FB /* Main.storyboard in Resources */,
 				D31FF33A1FEC3418000626FB /* GameScene.sks in Resources */,
 				D31FF3451FEC3418000626FB /* Assets.xcassets in Resources */,
+				D31FF3511FEC4916000626FB /* move.wav in Resources */,
 				D31FF3481FEC3418000626FB /* LaunchScreen.storyboard in Resources */,
 				D31FF33C1FEC3418000626FB /* Actions.sks in Resources */,
 			);
