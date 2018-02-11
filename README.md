@@ -7,4 +7,4 @@ Simple snippet to game movement.
 * SpriteKit
 * Swift 4
 
-<img src="/img/img.png" height="600" width="300" />
+<img src="/img/img.png" height="300" width="600" />
